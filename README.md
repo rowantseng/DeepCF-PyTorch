@@ -47,12 +47,12 @@ python CFNet.py --dataset ml-1m --dmf /path/to/dmf/model --mlp /path/to/mlp/mode
 
 The evaluation results are shown as below:
 
-|                              | Hit Rate(HR) | NDCG         |
-|------------------------------|--------------|--------------|
-| CFNet-rl (DMF)               | 0.7055       | 0.4212       |
-| CFNet-ml (MLP)               | 0.7055       | 0.4236       |
-| CFNet w/o Pretrained Weights | 0.7048       | 0.4249       |
-| CFNet w/ Pretrained Weights  | 0.7220       | 0.4388       |
+|                              | Hit Rate(HR) | NDCG         | Download Link |
+|------------------------------|--------------|--------------| ------------- |
+| CFNet-rl (DMF)               | 0.7055       | 0.4212       | [weights](https://drive.google.com/file/d/1Y8TfV4YQTTf-h5Es44I4U-wtjc_dDOam/view?usp=sharing) |
+| CFNet-ml (MLP)               | 0.7055       | 0.4236       | [weights](https://drive.google.com/file/d/1JwM4QlyLpEDH-LCilTNMIdyKol8sdZEp/view?usp=sharing) |
+| CFNet w/o Pretrained Weights | 0.7048       | 0.4249       | [weights](https://drive.google.com/file/d/1-3t_tLo_4WGW2bBvixmK4nztvaRoftBN/view?usp=sharing) |
+| CFNet w/ Pretrained Weights  | 0.7220       | 0.4388       | [weights](https://drive.google.com/file/d/190TksdTFc6ZoS-mAzzhcmZ378Mufm198/view?usp=sharing) |
 
 There is one thing to be noticed that the CFNet with pretrained weights is saved at initial point. We don't actually need to fintune the model and the hit rate is equal to 0.7220 which is very close to 0.7253 reported on the paper(while NDCG is 0.4416 on the paper). By copying the weights from `CFNet-rl(DMF)` and `CFNet-ml(MLP)` models, CFNet has better representation on capturing stronger expressiveness rather than single model trained on tasks, representation learning(`CFNet-rl`) or matching function(`CFNet-ml`). So far, I have trained CFNet using several hyperparameters, but the model saved at initialization has the best performance while the loss decreased over epochs. Below is the screenshot of the experimental results:
 
